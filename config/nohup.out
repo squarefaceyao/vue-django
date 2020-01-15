@@ -1,0 +1,44 @@
+
+> vuetest@1.0.0 dev /root/vue-project
+> node build/dev-server.js
+
+[HPM] Proxy created: /api  ->  http://localhost:8080
+[HPM] Proxy rewrite rule created: "^/api" ~> ""
+[HPM] Proxy created: /predict  ->  http://localhost:8080
+[HPM] Proxy rewrite rule created: "^/predict" ~> ""
+> Starting dev server...
+events.js:187
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::80
+    at Server.setupListenHandle [as _listen2] (net.js:1298:14)
+    at listenInCluster (net.js:1346:12)
+    at Server.listen (net.js:1434:7)
+    at Function.listen (/root/vue-project/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/root/vue-project/build/dev-server.js:85:18)
+    at Module._compile (internal/modules/cjs/loader.js:945:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:962:10)
+    at Module.load (internal/modules/cjs/loader.js:798:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:711:12)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1014:10)
+    at internal/main/run_main_module.js:17:11
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (net.js:1325:8)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21) {
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'listen',
+  address: '::',
+  port: 80
+}
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! vuetest@1.0.0 dev: `node build/dev-server.js`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the vuetest@1.0.0 dev script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /root/.npm/_logs/2019-10-14T07_27_39_802Z-debug.log
